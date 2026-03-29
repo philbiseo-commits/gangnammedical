@@ -30,7 +30,7 @@ body {
   margin: 0;
   color: var(--text);
   background: linear-gradient(180deg, #f8fbff 0%, #edf3ff 100%);
-  font-family: "Manrope", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 a {
@@ -190,8 +190,9 @@ a {
 h1,
 h2 {
   margin: 0;
-  font-family: "Fraunces", serif;
+  font-family: "Outfit", sans-serif;
   line-height: 1.04;
+  letter-spacing: -0.03em;
 }
 
 h1 {
@@ -331,7 +332,7 @@ h2 {
 
 .visual-stats strong {
   display: block;
-  font-family: "Fraunces", serif;
+  font-family: "Outfit", sans-serif;
   font-size: 2rem;
   margin-bottom: 8px;
 }
@@ -548,7 +549,7 @@ h2 {
 .category-block-head h3 {
   margin: 0 0 8px;
   font-size: 1.55rem;
-  font-family: "Fraunces", serif;
+  font-family: "Outfit", sans-serif;
 }
 
 .category-count {
