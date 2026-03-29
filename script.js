@@ -3,7 +3,7 @@ const clinics = [
     name: "Lumiere Plastic Surgery",
     district: "Apgujeong",
     focus: "Rhinoplasty, revision",
-    copy: "A refined clinic profile built around nose surgery cases, detailed consultation flow, and a polished premium feel for overseas visitors.",
+    copy: "A premium-feeling clinic profile for visitors researching nose surgery, refined consultation experience, and premium positioning.",
     tags: ["Rhinoplasty", "Premium care", "English support"],
     price: "$$$",
   },
@@ -11,7 +11,7 @@ const clinics = [
     name: "Museon Clinic",
     district: "Gangnam",
     focus: "Eyelid surgery, facial harmony",
-    copy: "Best suited for visitors who want a clean and approachable consultation experience with strong focus on facial balance and first-time procedures.",
+    copy: "Designed for first-time visitors who want a more approachable clinic narrative around facial balance and clearer consultation flow.",
     tags: ["Eyelid surgery", "First-time visitors", "Consultation-friendly"],
     price: "$$",
   },
@@ -19,7 +19,7 @@ const clinics = [
     name: "Solea Aesthetic",
     district: "Sinsa",
     focus: "Lifting, anti-aging",
-    copy: "Presented as a strong option for lifting-focused patients who care about recovery guidance and a more mature treatment profile.",
+    copy: "A stronger match for lifting-focused users who care about aftercare framing, mature treatment goals, and recovery-conscious branding.",
     tags: ["Lifting", "Aftercare", "Mature audience"],
     price: "$$$",
   },
@@ -27,7 +27,7 @@ const clinics = [
     name: "The River Clinic",
     district: "Cheongdam",
     focus: "Facial contouring",
-    copy: "A more editorial-style pick for visitors comparing contouring-focused clinics with a boutique atmosphere and curated experience.",
+    copy: "A boutique-style card profile for users comparing contouring clinics and looking for a more design-led, premium discovery experience.",
     tags: ["Contouring", "Boutique feel", "Detailed planning"],
     price: "$$$",
   },
@@ -35,7 +35,7 @@ const clinics = [
     name: "Everline Plastic Surgery",
     district: "Gangnam",
     focus: "Natural-looking outcomes",
-    copy: "Useful for users searching for a natural-results narrative, approachable communication, and a calm, less overwhelming brand tone.",
+    copy: "A softer, calmer clinic profile suited for users prioritizing natural results and a less intimidating first impression.",
     tags: ["Natural results", "English-friendly", "Comfort-led"],
     price: "$$",
   },
@@ -43,7 +43,7 @@ const clinics = [
     name: "Linea Face Center",
     district: "Apgujeong",
     focus: "Revision, facial design",
-    copy: "Designed for comparison pages where patients want a clinic with a stronger identity in revision conversations and facial planning.",
+    copy: "Useful for higher-consideration visitors comparing revision and facial design positioning within a more curated shortlist.",
     tags: ["Revision", "Facial design", "Higher-touch"],
     price: "$$$",
   },
@@ -51,7 +51,7 @@ const clinics = [
     name: "Bello Seoul",
     district: "Sinsa",
     focus: "International visitors",
-    copy: "A candidate card format for users who value accessibility, softer branding, and clearer communication for their Korea trip planning.",
+    copy: "A profile format for users who value accessibility, softer branding, and a more visitor-friendly tone during early research.",
     tags: ["Foreign-patient friendly", "Planning support", "Clear communication"],
     price: "$$",
   },
@@ -59,7 +59,7 @@ const clinics = [
     name: "Atelier Plastic Clinic",
     district: "Cheongdam",
     focus: "Boutique premium surgery",
-    copy: "A premium clinic profile format suited for visitors who prioritize experience, atmosphere, and personalized positioning.",
+    copy: "A premium clinic profile for users who prioritize atmosphere, personalized care signals, and curated discovery over mass-market presentation.",
     tags: ["Premium", "Boutique", "Custom approach"],
     price: "$$$",
   },
@@ -67,7 +67,7 @@ const clinics = [
     name: "Cellune Medical",
     district: "Gangnam",
     focus: "Combined aesthetic care",
-    copy: "Useful when mixing surgical and non-surgical categories, especially for visitors deciding between plastic surgery and broader aesthetic care.",
+    copy: "Useful for users deciding between surgery and broader aesthetic care, especially where skin treatments and plastic surgery overlap.",
     tags: ["Hybrid care", "Skin + surgery", "Flexible path"],
     price: "$$",
   },
@@ -75,21 +75,20 @@ const clinics = [
     name: "Miren Clinic Seoul",
     district: "Apgujeong",
     focus: "Curated foreign-patient picks",
-    copy: "A final featured card showing how the site can frame each clinic as a selected pick rather than a hard-ranked winner.",
+    copy: "A discovery-ready clinic card that helps present the site's Top 10 format as a selected collection rather than a definitive leaderboard.",
     tags: ["Featured pick", "Top 10 format", "Discovery-ready"],
     price: "$$",
   },
 ];
 
-const grid = document.getElementById("clinic-grid");
-const categoryGroups = document.getElementById("category-groups");
-
-const categoryCollections = [
+const categories = [
   {
     id: "category-rhinoplasty",
     title: "Top 10 Rhinoplasty Clinics",
+    short: "Rhinoplasty",
+    tileCopy: "Start with the most searched Korean surgery category for international patients.",
     intro:
-      "For visitors starting with nose surgery research, this category gives a focused shortlist with premium, revision, and foreign-patient-friendly angles.",
+      "A focused shortlist for users starting with nose surgery, premium consult styles, revision awareness, and stronger discovery cues.",
     items: [
       "Lumiere Plastic Surgery",
       "Linea Face Center",
@@ -106,8 +105,10 @@ const categoryCollections = [
   {
     id: "category-eyelid",
     title: "Top 10 Eyelid Surgery Clinics",
+    short: "Eyelid Surgery",
+    tileCopy: "One of the clearest entry points for users comparing Korean facial surgery options.",
     intro:
-      "A category designed for one of the most searched Korean plastic surgery paths, balancing first-time comfort, facial harmony, and accessible consultation tone.",
+      "A category for users looking at first-time procedures, facial harmony, and softer clinic profiles that feel easier to approach.",
     items: [
       "Museon Clinic",
       "Everline Plastic Surgery",
@@ -124,8 +125,10 @@ const categoryCollections = [
   {
     id: "category-lifting",
     title: "Top 10 Lifting Clinics",
+    short: "Lifting",
+    tileCopy: "A better path for anti-aging, facelift, and recovery-aware exploration.",
     intro:
-      "This view supports users looking for facelift and lifting-focused discovery, including clinics that feel more recovery-aware and premium in tone.",
+      "For users comparing lifting and facelift-related options, especially where aftercare comfort and mature treatment framing matter.",
     items: [
       "Solea Aesthetic",
       "Atelier Plastic Clinic",
@@ -142,8 +145,10 @@ const categoryCollections = [
   {
     id: "category-contouring",
     title: "Top 10 Contouring Clinics",
+    short: "Contouring",
+    tileCopy: "A higher-consideration category with stronger premium and planning cues.",
     intro:
-      "For higher-consideration visitors comparing facial contouring paths, this section emphasizes clinics with stronger design, planning, and premium positioning cues.",
+      "Built for visitors researching facial contouring and comparing clinics through premium identity, planning depth, and stronger design positioning.",
     items: [
       "The River Clinic",
       "Linea Face Center",
@@ -160,8 +165,10 @@ const categoryCollections = [
   {
     id: "category-skin",
     title: "Top 10 Skin Treatment Clinics",
+    short: "Skin Treatments",
+    tileCopy: "An expansion category that captures broader aesthetic demand beyond surgery.",
     intro:
-      "Skin treatments expand the site beyond surgery and help capture broader international demand around lifting, lasers, boosters, and aesthetic care.",
+      "Useful for visitors who may begin with lasers, lifting, boosters, or skin-focused treatments before moving into surgery comparisons.",
     items: [
       "Cellune Medical",
       "Solea Aesthetic",
@@ -177,30 +184,31 @@ const categoryCollections = [
   },
 ];
 
+const clinicGrid = document.getElementById("clinic-grid");
+const categoryTiles = document.getElementById("category-tiles");
+const categoryGroups = document.getElementById("category-groups");
 const clinicMap = Object.fromEntries(clinics.map((clinic) => [clinic.name, clinic]));
 
-grid.innerHTML = clinics
+clinicGrid.innerHTML = clinics
   .map(
     (clinic) => `
-      <article class="clinic-card">
-        <div class="clinic-visual">
+      <article class="wide-card">
+        <div class="wide-card-visual">
           <span>${clinic.district}</span>
         </div>
-        <div class="clinic-content">
-          <div class="clinic-heading">
-            <span class="featured-pill">Featured clinic</span>
+        <div class="wide-card-content">
+          <div class="wide-card-head">
+            <span class="featured-badge">Selected clinic</span>
             <h3>${clinic.name}</h3>
           </div>
-          <p class="clinic-copy">${clinic.copy}</p>
-          <div class="clinic-meta">
+          <p>${clinic.copy}</p>
+          <div class="wide-card-tags">
             <span>${clinic.focus}</span>
             <span>English-friendly profile</span>
-          </div>
-          <div class="clinic-tags">
             ${clinic.tags.map((tag) => `<span>${tag}</span>`).join("")}
           </div>
-          <div class="clinic-footer">
-            <span class="price-badge">${clinic.price} Price tier</span>
+          <div class="wide-card-footer">
+            <span class="price">${clinic.price} Price tier</span>
             <a class="button button-secondary" href="#for-clinics">View details</a>
           </div>
         </div>
@@ -209,27 +217,43 @@ grid.innerHTML = clinics
   )
   .join("");
 
-categoryGroups.innerHTML = categoryCollections
+categoryTiles.innerHTML = categories
+  .map(
+    (category) => `
+      <a class="tile-card" href="#${category.id}">
+        <div>
+          <div class="tile-top">
+            <span class="tile-pill">Top 10</span>
+            <span class="tile-meta">${category.short}</span>
+          </div>
+          <h3>${category.title}</h3>
+          <p>${category.tileCopy}</p>
+        </div>
+      </a>
+    `
+  )
+  .join("");
+
+categoryGroups.innerHTML = categories
   .map(
     (category) => `
       <article class="category-block" id="${category.id}">
-        <div class="category-block-header">
+        <div class="category-block-head">
           <div>
             <h3>${category.title}</h3>
             <p>${category.intro}</p>
           </div>
           <span class="category-count">10 selected picks</span>
         </div>
-        <div class="mini-clinic-grid">
+        <div class="mini-card-grid">
           ${category.items
             .map((name) => {
               const clinic = clinicMap[name];
-
               return `
                 <article class="mini-card">
                   <div class="mini-card-top">
                     <h4>${clinic.name}</h4>
-                    <span class="price-badge">${clinic.price}</span>
+                    <span class="price">${clinic.price}</span>
                   </div>
                   <p>${clinic.focus} in ${clinic.district}</p>
                   <div class="mini-card-tags">
